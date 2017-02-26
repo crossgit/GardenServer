@@ -1,5 +1,6 @@
 var restify = require('restify'),
-    heros = require('./controllers/heros'),
+    heros = require('./controllers/heros.controller'),
+    house = require('./controllers/house.controller'),
     port = 3000;
 
 var server = restify.createServer({
@@ -22,6 +23,9 @@ server.get('/', function(req, res, next) {
 
 // heros
 server.get('api/heros', heros.query);
+
+// house
+server.get('api/house', house.query);
 
 server.listen(port, function() {
     console.log('port is ' + port);
