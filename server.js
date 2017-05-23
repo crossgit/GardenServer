@@ -23,7 +23,7 @@ server.get('/', function(req, res, next) {
 
 // heros
 server.get('api/heros', heros.query);
-
+server.get('api/heros/:id', heros.querybyid);
 // house
 server.get('api/house', house.query);
 
