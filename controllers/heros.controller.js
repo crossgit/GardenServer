@@ -14,7 +14,7 @@
          if (find) {
              res.send(200, find);
          } else {
-             res.send(404, { err: 'none' });
+             res.send(404, { err: 'none,not found this page' });
          }
          return next();
      }
